@@ -1,0 +1,47 @@
+.section {
+    padding: 4rem 0;
+    background-color: var(--color-primary);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+.title {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.partner {
+    opacity: 0.5;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.partner:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.05);
+    color: var(--color-accent-green);
+}

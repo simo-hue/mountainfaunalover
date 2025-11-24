@@ -1,0 +1,118 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 8rem 1.5rem 4rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--color-foreground);
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+}
+
+.partnerCard {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.partnerCard:hover {
+    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.logoContainer {
+    background: white;
+    border-radius: 1rem;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.logoText {
+    color: black;
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.partnerName {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-foreground);
+}
+
+.description {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-accent-green);
+    font-weight: 600;
+    transition: gap 0.3s ease;
+}
+
+.link:hover {
+    gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        gap: 6rem;
+    }
+
+    .partnerCard {
+        grid-template-columns: 300px 1fr;
+        gap: 3rem;
+        padding: 3rem;
+    }
+
+    .partnerCard:nth-child(even) {
+        grid-template-columns: 1fr 300px;
+    }
+
+    .partnerCard:nth-child(even) .logoContainer {
+        order: 2;
+    }
+}
