@@ -19,20 +19,29 @@ export const posts = [
     },
     {
         slug: "attrezzatura-fotografica-montagna",
-        title: "La mia attrezzatura per la fotografia faunistica",
-        excerpt: "Cosa porto nello zaino? Ecco il setup completo per non perdere mai lo scatto perfetto.",
+        title: "La Mia Prima Collaborazione",
+        excerpt: "Ollin, l'azienda americana che sta rivoluzionando un intero settore",
         date: "2024-09-10",
-        image: "/images/home/background.jpg",
+        image: "/images/blog/prima_patner/ollin.webp",
         category: "Tech & Gear",
         content: "Per fotografare gli animali in montagna serve pazienza, ma anche l'attrezzatura giusta..."
     },
     {
-        slug: "offroad-defender-neve",
-        title: "Offroad sulla neve con il Defender",
-        excerpt: "Test estremo per il Land Rover Defender 90 HSE. Come si comporta su ghiaccio e neve fresca?",
+        slug: "attrezzatura-fotografica-montagna",
+        title: "Seguire il lancio di un nuovo prodotto Swarovski Optik",
+        excerpt: "Swarovski Optik NL PURE 14x52",
+        date: "2024-09-10",
+        image: "/images/blog/prima_patner/ollin.webp",
+        category: "Tech & Gear",
+        content: "Per fotografare gli animali in montagna serve pazienza, ma anche l'attrezzatura giusta..."
+    },
+    {
+        slug: "Con i Militari A Fare Off-Road",
+        title: "Nel campo militare con i Defender...",
+        excerpt: "Test come si deve per il Land Rover Defender 90 HSE.",
         date: "2024-01-15",
         image: "/hero-bg.png",
         category: "Offroad",
-        content: "Guidare sulla neve richiede tecnica e il mezzo giusto..."
+        content: "Serve ancora tecnica e il mezzo giusto per andare in fuoristrada?"
     }
 ];
