@@ -51,18 +51,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 1rem;
     position: relative;
     overflow: hidden;
 }
 
-.logoText {
-    color: black;
-    font-size: 2rem;
-    font-weight: 800;
-    font-family: var(--font-heading);
-    text-transform: uppercase;
-    letter-spacing: -0.02em;
+.logo {
+    object-fit: contain;
+    padding: 1rem;
 }
 
 .content {

@@ -1,0 +1,29 @@
+import { posts } from "@/data/posts";
+
+export default function sitemap() {
+    const baseUrl = "https://mountainfaunalover.com"; // Replace with actual domain when live
+
+    // Static routes
+    const routes = [
+        "",
+        "/founder",
+        "/social",
+        "/partners",
+        "/blog",
+    ].map((route) => ({
+        url: `${baseUrl}${route}`,
+        lastModified: new Date(),
+        changeFrequency: "weekly",
+        priority: route === "" ? 1 : 0.8,
+    }));
+
+    // Dynamic blog posts
+    const blogPosts = posts.map((post) => ({
+        url: `${baseUrl}/blog/${post.slug}`,
+        lastModified: new Date(post.date),
+        changeFrequency: "monthly",
+        priority: 0.7,
+    }));
+
+    return [...routes, ...blogPosts];
+}

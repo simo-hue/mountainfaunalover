@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Youtube, Instagram, Video, Eye } from "lucide-react";
 import { getSocialStats } from "@/lib/social-stats";
+import SocialStorySection from "@/components/SocialStorySection";
 import styles from "./page.module.css";
 
 const CONTENT_FEED = [
@@ -94,6 +95,8 @@ export default async function SocialPage() {
                     ))}
                 </div>
             </header>
+
+            <SocialStorySection />
 
             <div className={styles.grid}>
                 {CONTENT_FEED.map((item) => (

@@ -1,28 +1,31 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ExternalLink } from "lucide-react";
+import PartnersStorySection from "@/components/PartnersStorySection";
 import styles from "./page.module.css";
 
 const PARTNERS = [
+    // ... existing partners array
     {
         id: "swarovski",
         name: "Swarovski Optik",
-        description: "L'eccellenza nell'osservazione naturalistica. Utilizzo i loro binocoli e cannocchiali (NL Pure, ATX) per avvistare la fauna alpina con una nitidezza incredibile, anche in condizioni di luce difficile. La qualità delle lenti mi permette di cogliere dettagli invisibili a occhio nudo.",
+        description: "Tutto l'equipaggiamento che utilizzo è stato regolarmente acquistato. La collaborazione mi offre l'opportunità unica di testare in anteprima prodotti rivoluzionari come il binocolo intelligente AX-Visio o i nuovi NL Pure, portando la mia esperienza di osservazione a un livello superiore.",
         website: "https://www.swarovskioptik.com",
-        logoText: "SWAROVSKI OPTIK"
+        logo: "/images/partners/Swarovski-Optik.jpg"
     },
     {
         id: "ollin",
         name: "Ollin.co",
         description: "Il sistema di digiscoping definitivo. Grazie all'adattatore magnetico Ollin, posso collegare istantaneamente il mio smartphone al cannocchiale Swarovski per catturare video e foto a lunga distanza con una stabilità perfetta. È il segreto dietro molti dei miei avvistamenti più spettacolari.",
         website: "https://ollin.co",
-        logoText: "OLLIN"
+        logo: "/images/partners/ollin.webp"
     },
     {
         id: "euromix",
         name: "Euromix Motors Trento",
-        description: "Il partner per le mie avventure off-road. Con il Land Rover Defender 90 HSE fornito da Euromix Motors, posso raggiungere i luoghi più remoti e selvaggi della Val di Rabbi in sicurezza e comfort, portando con me tutta l'attrezzatura necessaria.",
+        description: "Sono cliente Euromix Motors, dove ho acquistato il mio Defender 90. Questa relazione mi permette di partecipare e raccontarvi eventi privati esclusivi e raduni riservati, vivendo appieno lo spirito Land Rover insieme a una community di appassionati.",
         website: "https://www.euromixmotors.it",
-        logoText: "EUROMIX MOTORS"
+        logo: "/images/partners/euromix.jpg"
     }
 ];
 
@@ -41,11 +44,19 @@ export default function PartnersPage() {
                 </p>
             </header>
 
+            <PartnersStorySection />
+
             <div className={styles.grid}>
                 {PARTNERS.map((partner) => (
                     <article key={partner.id} className={styles.partnerCard}>
                         <div className={styles.logoContainer}>
-                            <span className={styles.logoText}>{partner.logoText}</span>
+                            <Image
+                                src={partner.logo}
+                                alt={`${partner.name} Logo`}
+                                fill
+                                className={styles.logo}
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            />
                         </div>
                         <div className={styles.content}>
                             <h2 className={styles.partnerName}>{partner.name}</h2>
