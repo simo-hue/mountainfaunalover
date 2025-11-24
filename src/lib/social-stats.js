@@ -1,9 +1,9 @@
 export async function getSocialStats() {
-    // Default mock data (fallback)
+    // ( fallback data )
     const stats = {
-        youtube: { subscribers: "15K+", views: "1.2M+" },
-        instagram: { followers: "25K+" },
-        tiktok: { followers: "50K+" }
+        youtube: { subscribers: "3K+", views: "2M+" },
+        instagram: { followers: "10K+" },
+        tiktok: { followers: "2K+" }
     };
 
     try {
@@ -11,7 +11,7 @@ export async function getSocialStats() {
         if (process.env.YOUTUBE_API_KEY && process.env.YOUTUBE_CHANNEL_ID) {
             const ytResponse = await fetch(
                 `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${process.env.YOUTUBE_CHANNEL_ID}&key=${process.env.YOUTUBE_API_KEY}`,
-                { next: { revalidate: 3600 } } // Cache for 1 hour
+                { next: { revalidate: 360000 } } // Cache for < 4 days
             );
 
             if (ytResponse.ok) {

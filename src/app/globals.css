@@ -1,17 +1,23 @@
 :root {
   /* Alpine Palette */
-  --color-background: #0f172a; /* Deep Slate */
-  --color-foreground: #f8fafc; /* Snow White */
-  
-  --color-primary: #1e293b; /* Darker Slate */
-  --color-secondary: #334155; /* Slate */
-  
-  --color-accent-green: #10b981; /* Emerald */
-  --color-accent-orange: #f97316; /* Sunset */
-  
+  --color-background: #0f172a;
+  /* Deep Slate */
+  --color-foreground: #f8fafc;
+  /* Snow White */
+
+  --color-primary: #1e293b;
+  /* Darker Slate */
+  --color-secondary: #334155;
+  /* Slate */
+
+  --color-accent-green: #10b981;
+  /* Emerald */
+  --color-accent-orange: #f97316;
+  /* Sunset */
+
   --glass-bg: rgba(15, 23, 42, 0.6);
   --glass-border: rgba(255, 255, 255, 0.1);
-  
+
   --font-heading: var(--font-outfit);
   --font-body: var(--font-inter);
 }
@@ -32,7 +38,12 @@ body {
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading), sans-serif;
   font-weight: 700;
   line-height: 1.2;
@@ -53,12 +64,18 @@ a {
 
 .text-gradient {
   background: linear-gradient(to right, #f8fafc, #94a3b8);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }

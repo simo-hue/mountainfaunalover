@@ -13,7 +13,7 @@ export default function FounderPage() {
             <header className={styles.header}>
                 <div className={styles.profileImageContainer}>
                     <Image
-                        src="/logo.jpg" // Using logo as placeholder if no personal photo is available yet
+                        src="/images/branding/logo.jpg" // Using logo as placeholder if no personal photo is available yet
                         alt="Simone Mattioli"
                         fill
                         className={styles.profileImage}

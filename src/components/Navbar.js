@@ -31,7 +31,7 @@ export default function Navbar() {
                 <Link href="/" className={styles.logo}>
                     <div className={styles.logoImageContainer}>
                         <Image
-                            src="/logo.jpg"
+                            src="/images/branding/logo.jpg"
                             alt="Mountain & Fauna Lover Logo"
                             width={50}
                             height={50}

@@ -137,11 +137,21 @@
 }
 
 @media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 0;
+    }
+
     .navLinks {
         display: none;
     }
 
     .mobileToggle {
         display: block;
+    }
+
+    .logoText {
+        display: block;
+        /* Ensure logo text is visible on mobile for better branding */
+        font-size: 1.1rem;
     }
 }

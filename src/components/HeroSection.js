@@ -9,7 +9,7 @@ export default function HeroSection() {
         <section className={styles.hero}>
             <div className={styles.background}>
                 <Image
-                    src="/background.jpg"
+                    src="/images/home/background.jpg"
                     alt="Mountain landscape at sunset"
                     fill
                     priority

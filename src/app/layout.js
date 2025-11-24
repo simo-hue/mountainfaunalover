@@ -23,7 +23,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="it">
-      <body className={`${inter.variable} ${outfit.variable} antialiased`}>
+      <body
+        className={`${inter.variable} ${outfit.variable} antialiased`}
+        suppressHydrationWarning
+      >
         <Navbar />
         {children}
         <Footer />

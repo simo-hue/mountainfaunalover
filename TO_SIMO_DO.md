@@ -2,15 +2,6 @@
 
 Questo file contiene le istruzioni per le azioni manuali che devi compiere per completare la configurazione del sito e mantenerlo aggiornato.
 
-
-### Passo B: Ottenere la YouTube API Key
-1.  Vai su [Google Cloud Console](https://console.cloud.google.com/).
-2.  Crea un nuovo progetto.
-3.  Cerca "YouTube Data API v3" nella libreria e abilitala.
-4.  Vai su "Credenziali" -> "Crea Credenziali" -> "Chiave API".
-5.  Copia la chiave e incollala in `.env.local` al posto di `la_tua_chiave_youtube_qui`.
-6.  Trova il tuo Channel ID (lo trovi nell'URL del tuo canale o nelle impostazioni avanzate di YouTube) e incollalo in `YOUTUBE_CHANNEL_ID`.
-
 ## 2. Gestione Blog
 Per aggiungere nuovi articoli al blog:
 1.  Apri il file `src/data/posts.js`.
@@ -26,10 +17,16 @@ Per aggiungere nuovi articoli al blog:
       content: "Il testo completo del tuo articolo..."
     },
     ```
-3.  Salva il file. Il sito si aggiornerà automaticamente.
 
-## 3. Immagini
-Quando aggiungi nuove immagini:
-1.  Mettile nella cartella `public`.
-2.  Usa nomi semplici e senza spazi (es. `cervo-neve.jpg` invece di `IMG 1234.jpg`).
-3.  Riferisciti a loro nel codice iniziando con `/` (es. `/cervo-neve.jpg`).
+## 3. Gestione Immagini
+Ho organizzato le immagini in cartelle specifiche per mantenere tutto ordinato. Quando aggiungi nuove foto, segui questa struttura in `public/images/`:
+
+-   `branding/`: Loghi e icone del brand (es. `logo.jpg`).
+-   `home/`: Immagini per la homepage (es. `background.jpg`).
+-   `blog/`: Immagini per gli articoli del blog.
+-   `social/`: Immagini per la pagina social.
+-   `partners/`: Loghi dei partner.
+-   `founder/`: Foto per la pagina Founder.
+
+**Esempio:** Se aggiungi una foto per un nuovo articolo, mettila in `public/images/blog/cervo.jpg` e nel file `posts.js` scrivi:
+`image: "/images/blog/cervo.jpg"`

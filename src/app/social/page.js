@@ -8,7 +8,7 @@ const CONTENT_FEED = [
         id: 1,
         platform: "youtube",
         title: "Il BRAMITO potente del cervo maschio - Documentario Completo",
-        image: "/hero-bg.png",
+        image: "/images/home/background.jpg",
         views: "15k visualizzazioni",
         link: "https://youtube.com",
         type: "landscape"
@@ -17,7 +17,7 @@ const CONTENT_FEED = [
         id: 2,
         platform: "tiktok",
         title: "Dietro le quinte: Appostamento all'alba",
-        image: "/hero-bg.png",
+        image: "/images/home/background.jpg",
         views: "50k views",
         link: "https://tiktok.com",
         type: "portrait"
@@ -26,7 +26,7 @@ const CONTENT_FEED = [
         id: 3,
         platform: "instagram",
         title: "La magia della prima neve",
-        image: "/hero-bg.png",
+        image: "/images/home/background.jpg",
         views: "2.5k likes",
         link: "https://instagram.com",
         type: "portrait"
@@ -35,7 +35,7 @@ const CONTENT_FEED = [
         id: 4,
         platform: "youtube",
         title: "Test Attrezzatura: Swarovski NL Pure",
-        image: "/hero-bg.png",
+        image: "/images/home/background.jpg",
         views: "8k visualizzazioni",
         link: "https://youtube.com",
         type: "landscape"
@@ -44,7 +44,7 @@ const CONTENT_FEED = [
         id: 5,
         platform: "tiktok",
         title: "Incontro ravvicinato con una volpe",
-        image: "/hero-bg.png",
+        image: "/images/home/background.jpg",
         views: "120k views",
         link: "https://tiktok.com",
         type: "portrait"

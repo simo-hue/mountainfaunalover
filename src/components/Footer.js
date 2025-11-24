@@ -13,7 +13,7 @@ export default function Footer() {
                     <div className={styles.brand}>
                         <div className={styles.logoContainer}>
                             <Image
-                                src="/logo.jpg"
+                                src="/images/branding/logo.jpg"
                                 alt="Mountain & Fauna Lover Logo"
                                 width={60}
                                 height={60}
