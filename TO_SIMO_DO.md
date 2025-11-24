@@ -2,21 +2,6 @@
 
 Questo file contiene le istruzioni per le azioni manuali che devi compiere per completare la configurazione del sito e mantenerlo aggiornato.
 
-## 1. Configurazione API Social (Importante!)
-Per far sì che le statistiche (iscritti, visualizzazioni) si aggiornino automaticamente, devi ottenere le chiavi API dalle piattaforme e inserirle nel progetto.
-
-### Passo A: Crea il file delle variabili d'ambiente
-1.  Nella cartella principale del progetto, crea un file chiamato `.env.local`.
-2.  Incolla il seguente contenuto (dovrai sostituire i valori dopo l'uguale):
-
-```env
-# YouTube Data API v3
-YOUTUBE_API_KEY=la_tua_chiave_youtube_qui
-YOUTUBE_CHANNEL_ID=UCxxxxxxxxxxxxxxx
-
-# Instagram (Opzionale - richiede setup complesso)
-INSTAGRAM_ACCESS_TOKEN=il_tuo_token_instagram
-```
 
 ### Passo B: Ottenere la YouTube API Key
 1.  Vai su [Google Cloud Console](https://console.cloud.google.com/).

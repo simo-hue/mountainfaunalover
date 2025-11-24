@@ -1,0 +1,120 @@
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 8rem 1.5rem 4rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.profileImageContainer {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 2rem;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.profileImage {
+    object-fit: cover;
+}
+
+.title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-foreground);
+    background: linear-gradient(to right, #fff, #a5f3fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    color: var(--color-accent-green);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.bio {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    text-align: center;
+}
+
+.section {
+    margin-bottom: 4rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 2rem;
+    padding: 3rem;
+}
+
+.sectionTitle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--color-accent-green);
+}
+
+.cardIcon {
+    margin-bottom: 1rem;
+    color: var(--color-accent-green);
+}
+
+.cardTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.cardText {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .section {
+        padding: 2rem;
+    }
+}
