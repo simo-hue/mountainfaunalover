@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Github, Linkedin, Globe, Code, Heart, Mountain } from "lucide-react";
+import FounderStorySection from "@/components/FounderStorySection";
 import styles from "./page.module.css";
 
 export const metadata = {
@@ -22,18 +23,11 @@ export default function FounderPage() {
                 <h1 className={styles.title}>Simone Mattioli</h1>
                 <p className={styles.subtitle}>Tech Enthusiast & Nature Lover</p>
                 <div className={styles.bio}>
-                    <p>
-                        Ciao! Sono Simone, uno studente di Informatica all'Università di Verona con una doppia anima:
-                        da una parte la passione per il codice, l'Intelligenza Artificiale e l'High Performance Computing (HPC);
-                        dall'altra un amore sconfinato per la montagna e la fauna selvatica.
-                    </p>
-                    <br />
-                    <p>
-                        <strong>Mountain & Fauna Lover</strong> nasce proprio da questo incrocio: il desiderio di utilizzare la tecnologia
-                        per raccontare, preservare e condividere la bellezza della natura che ci circonda.
-                    </p>
+                    Se sei curioso sui dietro alle quinte di Mountain & Fauna Lover, beh...Leggi qui sotto!
                 </div>
             </header>
+
+            <FounderStorySection />
 
             <section className={styles.section}>
                 <h2 className={styles.sectionTitle}>Il Mio Mondo</h2>
