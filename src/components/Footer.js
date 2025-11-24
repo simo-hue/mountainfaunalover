@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Youtube, Instagram, Video, Mountain } from "lucide-react";
 import styles from "./Footer.module.css";
 
@@ -8,12 +9,20 @@ export default function Footer() {
     return (
         <footer className={styles.footer}>
             <div className={styles.container}>
-                <div className={styles.brand}>
-                    <div className={styles.logo}>
-                        <Mountain size={24} />
-                        <span>Mountain & Fauna Lover</span>
+                <div className={styles.content}>
+                    <div className={styles.brand}>
+                        <div className={styles.logoContainer}>
+                            <Image
+                                src="/logo.jpg"
+                                alt="Mountain & Fauna Lover Logo"
+                                width={60}
+                                height={60}
+                                className={styles.logoImage}
+                            />
+                        </div>
+                        <span className={styles.brandName}>Mountain & Fauna Lover</span>
+                        <p className={styles.tagline}>Esplorando la natura selvaggia, un passo alla volta.</p>
                     </div>
-                    <p className={styles.tagline}>Esplorando la natura, un passo alla volta.</p>
                 </div>
 
                 <div className={styles.socials}>

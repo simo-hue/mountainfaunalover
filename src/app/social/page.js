@@ -1,12 +1,7 @@
 import Image from "next/image";
-import { Youtube, Instagram, Video } from "lucide-react";
+import { Youtube, Instagram, Video, Eye } from "lucide-react";
+import { getSocialStats } from "@/lib/social-stats";
 import styles from "./page.module.css";
-
-const SOCIAL_STATS = [
-    { label: "YouTube Subscribers", value: "15K+" },
-    { label: "Instagram Followers", value: "25K+" },
-    { label: "TikTok Followers", value: "50K+" },
-];
 
 const CONTENT_FEED = [
     {
@@ -61,7 +56,16 @@ export const metadata = {
     description: "Segui le mie avventure su YouTube, Instagram e TikTok. Video esclusivi, foto e dietro le quinte.",
 };
 
-export default function SocialPage() {
+export default async function SocialPage() {
+    const stats = await getSocialStats();
+
+    const SOCIAL_STATS = [
+        { label: "YouTube Subscribers", value: stats.youtube.subscribers, icon: <Youtube size={24} /> },
+        { label: "YouTube Views", value: stats.youtube.views, icon: <Eye size={24} /> },
+        { label: "Instagram Followers", value: stats.instagram.followers, icon: <Instagram size={24} /> },
+        { label: "TikTok Followers", value: stats.tiktok.followers, icon: <Video size={24} /> },
+    ];
+
     const getIcon = (platform) => {
         switch (platform) {
             case "youtube": return <Youtube size={20} />;
@@ -83,7 +87,9 @@ export default function SocialPage() {
                     {SOCIAL_STATS.map((stat, index) => (
                         <div key={index} className={styles.statItem}>
                             <span className={styles.statValue}>{stat.value}</span>
-                            <span className={styles.statLabel}>{stat.label}</span>
+                            <span className={styles.statLabel} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
+                                {stat.icon} {stat.label}
+                            </span>
                         </div>
                     ))}
                 </div>

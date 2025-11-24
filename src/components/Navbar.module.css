@@ -8,6 +8,45 @@
     transition: all 0.3s ease;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.25rem;
+    font-family: var(--font-heading);
+    transition: opacity 0.3s ease;
+}
+
+.logoImageContainer {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.logoImage {
+    object-fit: cover;
+}
+
+.logoText {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .logoText {
+        display: block;
+    }
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
 .navbar.scrolled {
     padding: 1rem 0;
     background: rgba(15, 23, 42, 0.8);
