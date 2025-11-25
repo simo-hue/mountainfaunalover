@@ -24,7 +24,8 @@ function calculateReadTime(content) {
 }
 
 export default async function BlogPost({ params }) {
-    const post = await getPostBySlug(params.slug);
+    const { slug } = await params;
+    const post = await getPostBySlug(slug);
 
     if (!post) {
         notFound();

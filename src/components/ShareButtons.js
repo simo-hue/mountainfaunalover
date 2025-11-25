@@ -1,6 +1,6 @@
 "use client";
 
-import { Facebook, Twitter, Linkedin, Link as LinkIcon } from "lucide-react";
+import { Facebook, Twitter, Link as LinkIcon, MessageCircle, Instagram } from "lucide-react";
 import styles from "./ShareButtons.module.css";
 
 export default function ShareButtons({ title, slug }) {
@@ -37,15 +37,24 @@ export default function ShareButtons({ title, slug }) {
                     <span>Twitter</span>
                 </a>
                 <a
-                    href={`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`}
+                    href={`https://wa.me/?text=${shareText}%20${shareUrl}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.shareButton}
-                    aria-label="Condividi su LinkedIn"
+                    aria-label="Condividi su WhatsApp"
                 >
-                    <Linkedin size={20} />
-                    <span>LinkedIn</span>
+                    <MessageCircle size={20} />
+                    <span>WhatsApp</span>
                 </a>
+                <button
+                    onClick={copyToClipboard}
+                    className={styles.shareButton}
+                    aria-label="Condividi su Instagram"
+                >
+                    <Instagram size={20} />
+                    <span>Instagram</span>
+                </button>
+
                 <button
                     onClick={copyToClipboard}
                     className={styles.shareButton}
