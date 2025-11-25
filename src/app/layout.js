@@ -19,28 +19,31 @@ const outfit = Outfit({
 export const metadata = {
   metadataBase: new URL("https://mountainfaunalover.com"),
   title: {
-    default: "Mountain & Fauna Lover | Avvistamenti Cervi e Fauna in Trentino Alto Adige",
+    default: "Mountain & Fauna Lover | Avvistamenti Cervi e Fauna in Trentino",
     template: "%s | Mountain & Fauna Lover",
   },
-  description: "La guida definitiva per avvistamenti cervi e fauna in Val di Rabbi e Val di Sole. Escursioni in e-bike, trekking, e consigli da local per vivere la natura selvaggia del Trentino. Recensioni Swarovski Optik.",
+  description: "La guida definitiva per avvistamenti cervi, fauna selvatica e natura in Val di Rabbi e Val di Sole. Escursioni e-bike, trekking, fotografia naturalistica e recensioni Swarovski Optik.",
   keywords: [
     "avvistamenti cervi trentino",
     "fauna val di rabbi",
+    "bramito del cervo",
     "escursioni ebike val di sole",
     "trekking val di rabbi",
     "consigli local val di rabbi",
     "swarovski optik recensioni",
     "fotografia naturalistica trentino",
     "simone mattioli",
+    "mountain fauna lover",
+    "guide naturalistiche trentino"
   ],
-  authors: [{ name: "Simone Mattioli" }],
+  authors: [{ name: "Simone Mattioli", url: "https://mountainfaunalover.com/founder" }],
   creator: "Simone Mattioli",
   openGraph: {
     type: "website",
     locale: "it_IT",
     url: "https://mountainfaunalover.com",
     title: "Mountain & Fauna Lover | Avvistamenti Cervi e Natura in Trentino",
-    description: "Scopri la Val di Rabbi e la Val di Sole con gli occhi di un local. Avvistamenti fauna, percorsi e-bike e trekking unici.",
+    description: "Scopri la Val di Rabbi e la Val di Sole con gli occhi di un local. Avvistamenti fauna, percorsi e-bike e trekking unici. Vivi la natura selvaggia.",
     siteName: "Mountain & Fauna Lover",
     images: [
       {
@@ -54,9 +57,9 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Mountain & Fauna Lover | Avventura in Val di Rabbi",
-    description: "Avvistamenti cervi, e-bike e natura selvaggia in Trentino.",
+    description: "Avvistamenti cervi, e-bike e natura selvaggia in Trentino. Scopri i segreti della Val di Rabbi.",
     images: ["/images/home/background.jpg"],
-    creator: "@simonemattioli", // Placeholder, update if user has handle
+    creator: "@simonemattioli",
   },
   robots: {
     index: true,
@@ -68,6 +71,9 @@ export const metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
+  },
+  verification: {
+    google: "google-site-verification-code", // Placeholder
   },
 };
 

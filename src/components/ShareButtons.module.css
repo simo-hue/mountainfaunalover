@@ -1,0 +1,50 @@
+.shareSection {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.shareTitle {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-foreground);
+}
+
+.shareButtons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.shareButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 2rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.shareButton:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transform: translateY(-2px);
+    border-color: var(--color-accent-green);
+}
+
+@media (max-width: 600px) {
+    .shareButtons {
+        gap: 0.5rem;
+    }
+
+    .shareButton {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+}

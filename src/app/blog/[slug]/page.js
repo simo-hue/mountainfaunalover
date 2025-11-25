@@ -1,30 +1,35 @@
+import ReadingProgress from "@/components/ReadingProgress";
+import ShareButtons from "@/components/ShareButtons";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, Facebook, Twitter, Linkedin, Link as LinkIcon } from "lucide-react";
-import { posts } from "@/data/posts";
+import { ArrowLeft } from "lucide-react";
+import { getAllPostSlugs, getPostBySlug } from "@/lib/posts";
 import styles from "./page.module.css";
 
 export async function generateStaticParams() {
-    return posts.map((post) => ({
-        slug: post.slug,
+    const paths = getAllPostSlugs();
+    return paths.map((path) => ({
+        slug: path.params.slug,
     }));
 }
 
 function calculateReadTime(content) {
     const wordsPerMinute = 200;
-    const wordCount = content.split(' ').length;
+    // Strip HTML tags for word count
+    const text = content.replace(/<[^>]*>?/gm, '');
+    const wordCount = text.split(/\s+/).length;
     return Math.ceil(wordCount / wordsPerMinute);
 }
 
-export default function BlogPost({ params }) {
-    const post = posts.find((p) => p.slug === params.slug);
+export default async function BlogPost({ params }) {
+    const post = await getPostBySlug(params.slug);
 
     if (!post) {
         notFound();
     }
 
-    const readTime = calculateReadTime(post.content);
+    const readTime = calculateReadTime(post.contentHtml);
     const shareUrl = `https://mountainfaunalover.com/blog/${post.slug}`;
     const shareText = encodeURIComponent(post.title);
 
@@ -57,6 +62,7 @@ export default function BlogPost({ params }) {
 
     return (
         <article className={styles.container}>
+            <ReadingProgress />
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
@@ -97,62 +103,12 @@ export default function BlogPost({ params }) {
                 />
             </div>
 
-            <div className={styles.content}>
-                <p>{post.content}</p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <p>
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
+            <div
+                className={styles.content}
+                dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+            />
 
-            <div className={styles.shareSection}>
-                <h3 className={styles.shareTitle}>Condividi questo articolo</h3>
-                <div className={styles.shareButtons}>
-                    <a
-                        href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.shareButton}
-                        aria-label="Condividi su Facebook"
-                    >
-                        <Facebook size={20} />
-                        <span>Facebook</span>
-                    </a>
-                    <a
-                        href={`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.shareButton}
-                        aria-label="Condividi su Twitter"
-                    >
-                        <Twitter size={20} />
-                        <span>Twitter</span>
-                    </a>
-                    <a
-                        href={`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.shareButton}
-                        aria-label="Condividi su LinkedIn"
-                    >
-                        <Linkedin size={20} />
-                        <span>LinkedIn</span>
-                    </a>
-                    <button
-                        onClick={() => {
-                            navigator.clipboard.writeText(shareUrl);
-                            alert('Link copiato!');
-                        }}
-                        className={styles.shareButton}
-                        aria-label="Copia link"
-                    >
-                        <LinkIcon size={20} />
-                        <span>Copia Link</span>
-                    </button>
-                </div>
-            </div>
+            <ShareButtons title={post.title} slug={post.slug} />
         </article>
     );
 }

@@ -54,7 +54,7 @@ export default function PartnersPage() {
                                 src={partner.logo}
                                 alt={`${partner.name} Logo`}
                                 fill
-                                className={styles.logo}
+                                className={partner.id === 'ollin' ? styles.logo : styles.logoFull}
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             />
                         </div>

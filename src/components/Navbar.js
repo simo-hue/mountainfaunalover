@@ -46,6 +46,7 @@ export default function Navbar() {
                     <li><Link href="/social" className={styles.navLink}>Social</Link></li>
                     <li><Link href="/partners" className={styles.navLink}>Partners</Link></li>
                     <li><Link href="/blog" className={styles.navLink}>Blog</Link></li>
+                    <li><Link href="/faq" className={styles.navLink}>FAQ</Link></li>
                     <li><Link href="/founder" className={styles.navLink}>Founder</Link></li>
                 </ul>
 
@@ -62,6 +63,7 @@ export default function Navbar() {
                     <Link href="/social" className={styles.navLink} onClick={toggleMenu}>Social</Link>
                     <Link href="/partners" className={styles.navLink} onClick={toggleMenu}>Partners</Link>
                     <Link href="/blog" className={styles.navLink} onClick={toggleMenu}>Blog</Link>
+                    <Link href="/faq" className={styles.navLink} onClick={toggleMenu}>FAQ</Link>
                     <Link href="/founder" className={styles.navLink} onClick={toggleMenu}>Founder</Link>
                 </div>
             </div>

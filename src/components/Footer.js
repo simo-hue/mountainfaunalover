@@ -23,6 +23,8 @@ export default function Footer() {
                         <span className={styles.brandName}>Mountain & Fauna Lover</span>
                         <p className={styles.tagline}>Esplorando la natura selvaggia, un passo alla volta.</p>
                     </div>
+
+
                 </div>
 
                 <div className={styles.socials}>

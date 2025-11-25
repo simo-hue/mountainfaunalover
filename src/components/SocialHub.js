@@ -9,9 +9,9 @@ const SOCIAL_CONTENT = [
         id: 1,
         platform: "youtube",
         title: "Il BRAMITO potente del cervo maschio",
-        image: "/hero-bg.png", // Placeholder using existing image
+        image: "https://img.youtube.com/vi/yH9cArzx4n8/maxresdefault.jpg",
         views: "15k visualizzazioni",
-        link: "https://youtube.com"
+        link: "https://youtu.be/yH9cArzx4n8"
     },
     {
         id: 2,

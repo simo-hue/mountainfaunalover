@@ -10,6 +10,7 @@ export default function sitemap() {
         "/social",
         "/partners",
         "/blog",
+        "/faq",
     ].map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: new Date(),
